@@ -1,0 +1,40 @@
+<head>
+  <title>lunchbuddy</title>
+</head>
+
+<body>
+  <h1>Lunch Buddy</h1>
+
+  {{#each bunch}}
+      {{> bunchTemplate}}
+  {{/each}}
+  <div class="bunch">
+    {{#if startNewBunch}}
+       <form class="new-bunch">
+           <input type="text" name="newBunchRestaurant" placeholder="restaurant name" />
+           <input type="text" name="newBunchTime" placeholder="time" />
+           <button type="submit">Go!</button>
+       </form>
+    {{else}}
+        <button class="new-bunch-button">new group</button>
+    {{/if}}
+  </div>
+</body>
+
+<template name="bunchTemplate">
+  <div class="bunch">
+    <h2>{{restaurant}} @ {{time}}</h2>
+    <form class="new-member">
+        <input type="text" name="newGuy" placeholder="your name" />
+    </form>
+    <ul>
+    {{#each members}}
+        {{> memberTemplate}}
+    {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="memberTemplate">
+   <li class="li-member"> {{member}} <button class="delete">&times;</button> </li>
+</template>

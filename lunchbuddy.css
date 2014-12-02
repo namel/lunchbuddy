@@ -1,0 +1,26 @@
+/* CSS declarations go here */
+.bunch {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    list-style: none;
+    padding: 5px;
+}
+
+.delete { 
+    float: right; 
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: #ccc;
+}
