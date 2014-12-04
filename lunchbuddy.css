@@ -25,6 +25,13 @@ li {
     color: #ccc;
 }
 
+.leave {
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: #ccc;
+}
+
 form input {
     display: block;
 }

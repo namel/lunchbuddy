@@ -4,14 +4,21 @@ if (Meteor.isClient) {
 
   // BODY helpers and events
   Template.body.helpers({
-     bunch: function() { return Bunch.find(); },
+     teamName: function() { return Session.get("teamName"); },
+     bunch: function() { return Bunch.find({ team: Session.get("teamName")}); },
      startNewBunch: function() { return Session.get("startNewBunch"); }
   });
   Template.body.events({
+     "submit .team-name": function(event) { 
+         Session.set("teamName", event.target.teamName.value); 
+         event.target.teamName.value = "";
+         return false;
+     },
+     "click .leave": function(event) { Session.set("teamName", null); },
      "click .new-bunch-button": function(event) { Session.set("startNewBunch", true); },
      "submit .new-bunch": function(event) { 
          var newBunch = { 
-             team: "interlude", 
+             team: Session.get("teamName"), 
              restaurant: event.target[0].value,
              time: event.target[1].value,
              members: []
