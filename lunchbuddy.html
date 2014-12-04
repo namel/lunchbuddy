@@ -22,8 +22,9 @@
 </body>
 
 <template name="bunchTemplate">
-  <div class="bunch">
-    <h2>{{restaurant}} @ {{time}}</h2>
+  <div class="bunch" bunch_id="{{_id}}">
+    <h2>{{restaurant}} @ {{time}}</h2> 
+    {{#if isEmpty}}<button class="delete">&times;</button> {{/if}}
     <form class="new-member">
         <input type="text" name="newGuy" placeholder="your name" />
     </form>

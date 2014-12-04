@@ -24,3 +24,7 @@ li {
     border: none;
     color: #ccc;
 }
+
+form input {
+    display: block;
+}

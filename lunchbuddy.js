@@ -28,7 +28,8 @@ if (Meteor.isClient) {
   Template.bunchTemplate.helpers({
      restaurant: function() { return this.restaurant; },
      time: function() { return this.time; },
-     members: function() { return this.members; }
+     members: function() { return this.members; },
+     isEmpty: function() { return this.members.length === 0; }
   });
   Template.bunchTemplate.events({
      "submit .new-member": function(event) {
@@ -36,17 +37,21 @@ if (Meteor.isClient) {
          Bunch.update(this._id, { $addToSet: {members: event.target.newGuy.value}});
          event.target.newGuy.value = "";
          return false;
-     }
+     },
+     "click .delete": function(event) { Bunch.remove(this._id); }
   });
 
   // MEMBER helpers and events
-  Template.memberTemplate.helpers({
-     member: function() { return this; }
+  Template.memberTemplate.helpers({ member: function() { return this; } });
+  Template.memberTemplate.events({
+     "click .delete": function(event) {
+        var bunch_id = $(event.target).parent().parent().parent().attr('bunch_id');
+        var bunch = Bunch.findOne({_id:bunch_id});
+        var removeIndex = bunch.members.indexOf(this.toString());
+        if (removeIndex < 0) return;
+        bunch.members.splice(removeIndex, 1);
+        Bunch.update(bunch._id, bunch);
+     }
   });
 }
 
-if (Meteor.isServer) {
-  Meteor.startup(function () {
-    // code to run on server at startup
-  });
-}
