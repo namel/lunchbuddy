@@ -1,0 +1,16 @@
+
+
+while true
+do
+    git fetch origin
+    git rev-list HEAD...origin/master --count > /tmp/new_commits
+
+    if [ `cat /tmp/new_commits` -gt 0 ]
+        then
+            git pull --rebase
+            meteor deploy lunchbuddy.meteor.com
+    fi
+   
+    sleep 30
+done
+ 
