@@ -6,7 +6,7 @@
   <h1>Lunch Buddies</h1>
 
   {{#if teamName}}
-  <h2>Team {{teamName}}</h2> <button class="leave">&times;</button><br>
+  <h2>Team: {{teamName}}</h2> <button class="leave">&times;</button><br>
   {{#each bunch}} {{> bunchTemplate}} {{/each}}
 
   <div class="bunch">
