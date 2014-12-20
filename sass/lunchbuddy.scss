@@ -7,13 +7,16 @@ html, body{
     padding:0;
 }
 #siteContent{
-    margin-top:100px;
+    padding-top:100px;
+    text-align:center;
+    h1{
+        font-family: Dancing Script, arial;
+        text-transform: uppercase;
+        font-size: 50px
+    }
 }
 
-h1{
-    font-family: Changa One, arial;
-    text-transform: uppercase;
-}
+
 
 .team-name-container{
     margin-top:50px;
@@ -21,19 +24,19 @@ h1{
 .input-title{
     text-transform: uppercase;
 }
-.team-name input{
-    width: 350px;
-    height:40px;
-    font-size: 16px;
-    padding: 0 10px;
-    box-sizing: border-box;
-    margin-top:10px;
+.team-name{
+    input{
+        width: 350px;
+        height:40px;
+        font-size: 16px;
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin-top:10px;
+        &:focus{
+            outline:none;
+        }
+    }
 }
-.team-name input:focus{
-    outline:none;
-}
-
-
 
 .bunch {
     display: inline-block;
