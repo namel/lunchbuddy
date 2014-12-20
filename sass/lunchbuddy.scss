@@ -1,3 +1,7 @@
+//colors
+
+$colorMain: #b1230c;
+
 /* CSS declarations go here */
 
 html, body{
@@ -10,9 +14,10 @@ html, body{
     padding-top:100px;
     text-align:center;
     h1{
-        font-family: Dancing Script, arial;
+        font-family: Lobster, arial;
         text-transform: uppercase;
-        font-size: 50px
+        font-size: 50px;
+        color:$colorMain;
     }
 }
 
@@ -20,11 +25,8 @@ html, body{
 
 .team-name-container{
     margin-top:50px;
-}
-.input-title{
-    text-transform: uppercase;
-}
-.team-name{
+    display: inline-block;
+    .team-name{
     input{
         width: 350px;
         height:40px;
@@ -37,6 +39,11 @@ html, body{
         }
     }
 }
+
+.input-title{
+    text-transform: uppercase;
+}
+
 
 .bunch {
     display: inline-block;
