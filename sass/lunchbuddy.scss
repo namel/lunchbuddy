@@ -1,0 +1,73 @@
+/* CSS declarations go here */
+
+html, body{
+    min-height:100%;
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+#siteContent{
+    margin-top:100px;
+}
+
+h1{
+    font-family: Changa One, arial;
+    text-transform: uppercase;
+}
+
+.team-name-container{
+    margin-top:50px;
+}
+.input-title{
+    text-transform: uppercase;
+}
+.team-name input{
+    width: 350px;
+    height:40px;
+    font-size: 16px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-top:10px;
+}
+.team-name input:focus{
+    outline:none;
+}
+
+
+
+.bunch {
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    position: relative;
+    list-style: none;
+    padding: 5px;
+}
+
+.delete { 
+    float: right; 
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: #ccc;
+}
+
+.leave {
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: #ccc;
+}
+
+form input {
+    display: block;
+}

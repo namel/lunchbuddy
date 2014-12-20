@@ -1,46 +1,50 @@
 <head>
   <title>lunchbuddy</title>
+  <link href='http://fonts.googleapis.com/css?family=Changa+One' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-  <h1>Lunch Buddies</h1>
+ <div id="siteContent">
+    <h1>Lunch Buddies</h1>
 
-  {{#if teamName}}
-  <h2>Your Team: {{teamName}}</h2> <button class="leave">&times;</button><br>
-  {{#each bunch}} {{> bunchTemplate}} {{/each}}
+    {{#if teamName}}
+    <h2>Your Team: {{teamName}}</h2> <button class="leave">&times;</button><br>
+    {{#each bunch}} {{> bunchTemplate}} {{/each}}
 
-  <div class="bunch">
-    {{#if startNewBunch}}
-       <form class="new-bunch">
-           <input type="text" name="newBunchRestaurant" placeholder="restaurant name" />
-           <input type="text" name="newBunchTime" placeholder="time" />
-           <button type="submit">Go!</button>
-       </form>
+    <div class="bunch">
+      {{#if startNewBunch}}
+         <form class="new-bunch">
+             <input type="text" name="newBunchRestaurant" placeholder="restaurant name" />
+             <input type="text" name="newBunchTime" placeholder="time" />
+             <button type="submit">Go!</button>
+         </form>
+      {{else}}
+          <button class="new-bunch-button">new group</button>
+      {{/if}}
+    </div>
     {{else}}
-        <button class="new-bunch-button">new group</button>
+    <div class="team-name-container">
+       <div class="input-title">Join a team</div>
+       <form class="team-name"><input type="text" name="teamName" /></form>
+    </div>
     {{/if}}
   </div>
-  {{else}}
-  <div>
-     Join a team:
-     <form class="team-name"><input type="text" name="teamName" /></form>
-  </div>
-  {{/if}}
 </body>
 
-<template name="bunchTemplate">
-  <div class="bunch" bunch_id="{{_id}}">
-    <h2>{{restaurant}} @ {{time}}</h2> 
+  <template name="bunchTemplate">
+    <div class="bunch" bunch_id="{{_id}}">
+      <h2>{{restaurant}} @ {{time}}</h2> 
 
-    {{#if isEmpty}}<button class="delete">&times;</button> {{/if}}
-    <form class="new-member">
-        <input type="text" name="newGuy" placeholder="your name" />
-    </form>
+      {{#if isEmpty}}<button class="delete">&times;</button> {{/if}}
+      <form class="new-member">
+          <input type="text" name="newGuy" placeholder="your name" />
+      </form>
 
-    <ul> {{#each members}} {{> memberTemplate}} {{/each}} </ul>
-  </div>
-</template>
+      <ul> {{#each members}} {{> memberTemplate}} {{/each}} </ul>
+    </div>
+  </template>
 
-<template name="memberTemplate">
-   <li class="li-member"> {{member}} <button class="delete">&times;</button> </li>
-</template>
+  <template name="memberTemplate">
+     <li class="li-member"> {{member}} <button class="delete">&times;</button> </li>
+  </template>
+
