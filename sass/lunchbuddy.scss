@@ -27,15 +27,16 @@ html, body{
     margin-top:50px;
     display: inline-block;
     .team-name{
-    input{
-        width: 350px;
-        height:40px;
-        font-size: 16px;
-        padding: 0 10px;
-        box-sizing: border-box;
-        margin-top:10px;
-        &:focus{
-            outline:none;
+        input{
+            width: 350px;
+            height:40px;
+            font-size: 16px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            margin-top:10px;
+            &:focus{
+                outline:none;
+            }
         }
     }
 }
