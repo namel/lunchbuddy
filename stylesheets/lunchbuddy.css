@@ -51,31 +51,44 @@ html, body {
   border: 1px solid #dddddd;
   box-shadow: 1px 1px 2px #ffffff inset;
   padding: 0.5em;
+  display: block;
+  position: relative;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 400px;
+  min-height: 120px;
+}
+/* line 65, ../sass/lunchbuddy.scss */
+.bunch:last-child {
+  border: none;
 }
 
-/* line 60, ../sass/lunchbuddy.scss */
+/* line 70, ../sass/lunchbuddy.scss */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 65, ../sass/lunchbuddy.scss */
+/* line 75, ../sass/lunchbuddy.scss */
 li {
   position: relative;
   list-style: none;
   padding: 5px;
 }
 
-/* line 71, ../sass/lunchbuddy.scss */
+/* line 81, ../sass/lunchbuddy.scss */
 .delete {
   float: right;
   font-weight: bold;
   background: none;
   border: none;
   color: #ccc;
+  font-size: 30px;
+  outline: none;
 }
 
-/* line 79, ../sass/lunchbuddy.scss */
+/* line 92, ../sass/lunchbuddy.scss */
 .leave {
   font-weight: bold;
   background: none;
@@ -83,7 +96,7 @@ li {
   color: #ccc;
 }
 
-/* line 86, ../sass/lunchbuddy.scss */
+/* line 99, ../sass/lunchbuddy.scss */
 form input {
   display: block;
 }

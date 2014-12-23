@@ -55,6 +55,16 @@ html, body{
     border:1px solid #dddddd;
     box-shadow: 1px 1px 2px #ffffff inset ;
     padding: 0.5em;
+    display:block;
+    position:relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width:400px;
+    min-height:120px;
+    &:last-child{
+        border:none;
+    }
 }
 
 ul {
@@ -74,6 +84,9 @@ li {
     background: none;
     border: none;
     color: #ccc;
+    font-size:30px;
+    outline:none;
+
 }
 
 .leave {
