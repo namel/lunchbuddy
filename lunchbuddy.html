@@ -34,7 +34,9 @@
 
   <template name="bunchTemplate">
     <div class="bunch" bunch_id="{{_id}}">
-      <h2>{{restaurant}} @ {{time}}</h2> 
+      <div class="bunchTitle">
+        <h2>{{restaurant}} @ {{time}}</h2>
+      </div>
 
       {{#if isEmpty}}<button class="delete">&times;</button> {{/if}}
       <form class="new-member">

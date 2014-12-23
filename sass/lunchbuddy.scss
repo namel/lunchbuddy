@@ -65,6 +65,15 @@ html, body{
     &:last-child{
         border:none;
     }
+    .bunchTitle{
+        background-color: #b1230c;
+        color: #fff;
+        text-align: left;
+        padding: 0 10px;
+        h2{
+            margin:0;
+        }
+    }
 }
 
 ul {
@@ -83,9 +92,10 @@ li {
     font-weight: bold;
     background: none;
     border: none;
-    color: #ccc;
+    color: #888;
     font-size:30px;
     outline:none;
+    cursor:pointer;
 
 }
 

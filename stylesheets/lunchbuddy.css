@@ -63,32 +63,44 @@ html, body {
 .bunch:last-child {
   border: none;
 }
+/* line 68, ../sass/lunchbuddy.scss */
+.bunch .bunchTitle {
+  background-color: #b1230c;
+  color: #fff;
+  text-align: left;
+  padding: 0 10px;
+}
+/* line 73, ../sass/lunchbuddy.scss */
+.bunch .bunchTitle h2 {
+  margin: 0;
+}
 
-/* line 70, ../sass/lunchbuddy.scss */
+/* line 79, ../sass/lunchbuddy.scss */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 75, ../sass/lunchbuddy.scss */
+/* line 84, ../sass/lunchbuddy.scss */
 li {
   position: relative;
   list-style: none;
   padding: 5px;
 }
 
-/* line 81, ../sass/lunchbuddy.scss */
+/* line 90, ../sass/lunchbuddy.scss */
 .delete {
   float: right;
   font-weight: bold;
   background: none;
   border: none;
-  color: #ccc;
+  color: #888;
   font-size: 30px;
   outline: none;
+  cursor: pointer;
 }
 
-/* line 92, ../sass/lunchbuddy.scss */
+/* line 102, ../sass/lunchbuddy.scss */
 .leave {
   font-weight: bold;
   background: none;
@@ -96,7 +108,7 @@ li {
   color: #888;
 }
 
-/* line 99, ../sass/lunchbuddy.scss */
+/* line 109, ../sass/lunchbuddy.scss */
 form input {
   display: block;
 }
