@@ -9,7 +9,7 @@
     <h1>Lunch Buddies</h1>
 
     {{#if teamName}}
-    <h2>Your Team: {{teamName}}</h2> <button class="leave">&times;</button><br>
+    <h2>Your Team: {{teamName}}</h2> <button class="leave xClose">&times;</button><br>
     {{#each bunch}} {{> bunchTemplate}} {{/each}}
 
     <div class="bunch">
@@ -38,7 +38,7 @@
         <h2>{{restaurant}} @ {{time}}</h2>
       </div>
 
-      {{#if isEmpty}}<button class="delete">&times;</button> {{/if}}
+      {{#if isEmpty}}<button class="delete xClose">&times;</button> {{/if}}
       <form class="new-member">
           <input type="text" name="newGuy" placeholder="your name" />
       </form>

@@ -113,8 +113,8 @@ li {
   padding: 5px;
 }
 
-/* line 116, ../sass/lunchbuddy.scss */
-.delete {
+/* line 120, ../sass/lunchbuddy.scss */
+.xClose {
   float: right;
   font-weight: bold;
   background: none;
@@ -125,15 +125,7 @@ li {
   cursor: pointer;
 }
 
-/* line 128, ../sass/lunchbuddy.scss */
-.leave {
-  font-weight: bold;
-  background: none;
-  border: none;
-  color: #888;
-}
-
-/* line 135, ../sass/lunchbuddy.scss */
+/* line 134, ../sass/lunchbuddy.scss */
 form input {
   display: block;
 }

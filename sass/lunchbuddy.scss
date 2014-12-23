@@ -114,6 +114,10 @@ li {
 }
 
 .delete { 
+    
+
+}
+.xClose{
     float: right; 
     font-weight: bold;
     background: none;
@@ -122,14 +126,9 @@ li {
     font-size:30px;
     outline:none;
     cursor:pointer;
-
 }
-
 .leave {
-    font-weight: bold;
-    background: none;
-    border: none;
-    color: #888;
+
 }
 
 form input {
