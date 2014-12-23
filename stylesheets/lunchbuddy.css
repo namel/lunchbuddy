@@ -63,32 +63,47 @@ html, body {
 .bunch:last-child {
   border: none;
 }
-/* line 68, ../sass/lunchbuddy.scss */
+/* line 67, ../sass/lunchbuddy.scss */
+.bunch:last-child button {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border: none;
+  background-color: #b1230c;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Lobster, arial;
+  text-transform: uppercase;
+}
+/* line 82, ../sass/lunchbuddy.scss */
 .bunch .bunchTitle {
   background-color: #b1230c;
   color: #fff;
   text-align: left;
   padding: 0 10px;
 }
-/* line 73, ../sass/lunchbuddy.scss */
+/* line 87, ../sass/lunchbuddy.scss */
 .bunch .bunchTitle h2 {
   margin: 0;
 }
 
-/* line 79, ../sass/lunchbuddy.scss */
+/* line 93, ../sass/lunchbuddy.scss */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 84, ../sass/lunchbuddy.scss */
+/* line 98, ../sass/lunchbuddy.scss */
 li {
   position: relative;
   list-style: none;
   padding: 5px;
 }
 
-/* line 90, ../sass/lunchbuddy.scss */
+/* line 104, ../sass/lunchbuddy.scss */
 .delete {
   float: right;
   font-weight: bold;
@@ -100,7 +115,7 @@ li {
   cursor: pointer;
 }
 
-/* line 102, ../sass/lunchbuddy.scss */
+/* line 116, ../sass/lunchbuddy.scss */
 .leave {
   font-weight: bold;
   background: none;
@@ -108,7 +123,7 @@ li {
   color: #888;
 }
 
-/* line 109, ../sass/lunchbuddy.scss */
+/* line 123, ../sass/lunchbuddy.scss */
 form input {
   display: block;
 }
