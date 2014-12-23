@@ -48,8 +48,6 @@ html, body {
 /* line 53, ../sass/lunchbuddy.scss */
 .bunch {
   display: inline-block;
-  border: 1px solid #dddddd;
-  box-shadow: 1px 1px 2px #ffffff inset;
   padding: 0.5em;
   display: block;
   position: relative;
@@ -58,6 +56,8 @@ html, body {
   margin: auto;
   width: 400px;
   min-height: 120px;
+  background-color: #ccc;
+  margin-bottom: 10px;
 }
 /* line 65, ../sass/lunchbuddy.scss */
 .bunch:last-child {
@@ -93,7 +93,7 @@ li {
   font-weight: bold;
   background: none;
   border: none;
-  color: #ccc;
+  color: #888;
 }
 
 /* line 99, ../sass/lunchbuddy.scss */
