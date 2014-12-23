@@ -64,6 +64,13 @@ html, body{
     margin-bottom: 10px;
     &:last-child{
         border:none;
+
+        // temp solution
+        input{
+            position:relative;
+            z-index:1;
+        }
+
         button{
             width: 100%;
             position: absolute;
@@ -75,7 +82,7 @@ html, body{
             background-color: #b1230c;
             color:#ffffff;
             cursor: pointer;
-            font-family: Lobster, arial;
+            font-size:16px;
             text-transform: uppercase;
         }       
     }
@@ -84,6 +91,7 @@ html, body{
         color: #fff;
         text-align: left;
         padding: 0 10px;
+        margin-bottom:0.5em;
         h2{
             margin:0;
         }
