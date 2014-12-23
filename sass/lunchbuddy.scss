@@ -1,8 +1,8 @@
-@import "compass/css3";
+//@import "compass/css3";
 
 //colors
 
-$colorMain: #b1230c;
+//$colorMain: #b1230c;
 
 /* CSS declarations go here */
 
@@ -11,7 +11,9 @@ html, body{
     height: 100%;
     margin:0;
     padding:0;
-    @include background-image(radial-gradient(45px 45px, #eeeeee 10px, #f6f6f6 30px));
+    background-color: #eeeeee;
+    font-family:roboto, sans-serif;
+    //background-image(radial-gradient(45px 45px, #eeeeee 10px, #f6f6f6 30px));
 }
 #siteContent{
     padding-top:100px;
@@ -19,7 +21,7 @@ html, body{
     h1{
         font-family: Lobster, arial;
         font-size: 50px;
-        color:$colorMain;
+        color:#b1230c;
     }
 }
 
@@ -50,8 +52,8 @@ html, body{
 
 .bunch {
     display: inline-block;
-    border: 1px solid black;
-    border-radius: 1em;
+    border:1px solid #dddddd;
+    box-shadow: 1px 1px 2px #ffffff inset ;
     padding: 0.5em;
 }
 
