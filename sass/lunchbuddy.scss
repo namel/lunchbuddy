@@ -48,25 +48,8 @@ html, body{
             position:relative;
             z-index:1;
         }
-
-        button{
-            width: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            border: none;
-            background-color: #b1230c;
-            color:#ffffff;
-            cursor: pointer;
-            font-size:16px;
-            text-transform: uppercase;
-        }       
     }
     .bunchTitle{
-        background-color: #b1230c;
-        color: #fff;
         text-align: left;
         padding: 0 10px;
         margin-bottom:0.5em;

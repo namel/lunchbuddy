@@ -9,17 +9,17 @@
     <h1 class="ui orange header">Lunch Buddies</h1>
 
     {{#if teamName}}
-    <h2>Your Team: {{teamName}} <button class="leave xClose">&times;</button><br></h2>
+    <h2>your team: {{teamName}} <button class="leave xClose">&times;</button><br></h2>
     {{#each bunch}} {{> bunchTemplate}} {{/each}}
 
       {{#if startNewBunch}}
-      <div class="bunch">
-         <form class="new-bunch">
-             <input type="text" name="newBunchRestaurant" placeholder="restaurant name" />
-             <input type="text" name="newBunchTime" placeholder="time" />
-             <button type="submit">Go!</button>
-         </form>
-      </div>
+      <form class="new-bunch">
+          <div class="ui primary orange inverted segment bunch">
+             <div class="ui input"><input type="text" name="newBunchRestaurant" placeholder="restaurant name" /> </div>
+             <div class="ui input"><input type="text" name="newBunchTime" placeholder="time" /></div>
+             <button class="ui button" type="submit">Go!</button>
+          </div>
+      </form>
       {{else}}
           <button class="ui animated button new-bunch-button">
               <div class="visible content">new group</div>
@@ -41,7 +41,7 @@
 </body>
 
   <template name="bunchTemplate">
-    <div class="bunch" bunch_id="{{_id}}">
+    <div class="ui secondary orange inverted left floated segment bunch" bunch_id="{{_id}}">
       <div class="bunchTitle">
         <h2>{{restaurant}} @ {{time}}</h2>
       </div>
