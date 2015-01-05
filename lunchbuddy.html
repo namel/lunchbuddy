@@ -1,32 +1,40 @@
 <head>
   <title>LunchBuddy</title>
-  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500,900' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
  <div id="siteContent">
-    <h1>Lunch Buddies</h1>
+    <h1 class="ui orange header">Lunch Buddies</h1>
 
     {{#if teamName}}
-    <h2>Your Team: {{teamName}}</h2> <button class="leave xClose">&times;</button><br>
+    <h2>Your Team: {{teamName}} <button class="leave xClose">&times;</button><br></h2>
     {{#each bunch}} {{> bunchTemplate}} {{/each}}
 
-    <div class="bunch">
       {{#if startNewBunch}}
+      <div class="bunch">
          <form class="new-bunch">
              <input type="text" name="newBunchRestaurant" placeholder="restaurant name" />
              <input type="text" name="newBunchTime" placeholder="time" />
              <button type="submit">Go!</button>
          </form>
+      </div>
       {{else}}
-          <button class="new-bunch-button">new group</button>
+          <button class="ui animated button new-bunch-button">
+              <div class="visible content">new group</div>
+              <div class="hidden content"> <i class="right arrow icon"></i> </div>
+          </button>
       {{/if}}
-    </div>
     {{else}}
     <div class="team-name-container">
-       <div class="input-title">Join a team</div>
-       <form class="team-name"><input type="text" name="teamName" /></form>
+       <form class="team-name">
+           <div class="ui right labeled left icon input">
+               <i class="users icon"></i>
+               <input type="text" placeholder="team name ..." name="teamName" />
+               <div class="ui tag label">Team</div>
+           </div>
+       </form>
     </div>
     {{/if}}
   </div>

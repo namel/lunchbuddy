@@ -5,7 +5,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #eeeeee;
   font-family: roboto, sans-serif;
 }
 
@@ -20,7 +19,7 @@ html, body {
 }
 /* line 25, ../sass/lunchbuddy.scss */
 #siteContent h1 {
-  font-family: Lobster, arial;
+  font-family: Oxygen, arial;
   font-size: 50px;
   color: #b1230c;
 }
@@ -29,19 +28,6 @@ html, body {
 .team-name-container {
   margin-top: 50px;
   display: inline-block;
-}
-/* line 38, ../sass/lunchbuddy.scss */
-.team-name-container .team-name input {
-  width: 350px;
-  height: 40px;
-  font-size: 16px;
-  padding: 0 10px;
-  box-sizing: border-box;
-  margin-top: 10px;
-}
-/* line 45, ../sass/lunchbuddy.scss */
-.team-name-container .team-name input:focus {
-  outline: none;
 }
 
 /* line 52, ../sass/lunchbuddy.scss */

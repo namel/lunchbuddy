@@ -11,7 +11,7 @@ html, body{
     height: 100%;
     margin:0;
     padding:0;
-    background-color: #eeeeee;
+    background-color: #fff;
     font-family:roboto, sans-serif;
     //background-image(radial-gradient(45px 45px, #eeeeee 10px, #f6f6f6 30px));
 }
@@ -23,34 +23,8 @@ html, body{
     right: 0;
     margin: auto;
     h1{
-        font-family: Lobster, arial;
-        font-size: 50px;
-        color:#b1230c;
+        font-family: Oxygen, arial;
     }
-}
-
-
-
-.team-name-container{
-    margin-top:50px;
-    display: inline-block;
-    .team-name{
-        input{
-            width: 350px;
-            height:40px;
-            font-size: 16px;
-            padding: 0 10px;
-            box-sizing: border-box;
-            margin-top:10px;
-            &:focus{
-                outline:none;
-            }
-        }
-    }
-}
-
-.input-title{
-    text-transform: uppercase;
 }
 
 
