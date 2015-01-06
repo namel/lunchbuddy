@@ -12,7 +12,10 @@
     <h2>your team: {{teamName}}
        <button class="leave xClose"><i class="small remove circle icon"></i></button>
     </h2>
+
+    <div class="ui three column grid">
     {{#each bunch}} {{> bunchTemplate}} {{/each}}
+    </div>
 
       {{#if startNewBunch}}
       <form class="new-bunch">
@@ -27,6 +30,7 @@
           </div>
       </form>
       {{else}}
+          <div class="ui divider"></div>
           <button class="ui animated button new-bunch-button">
               <div class="visible content">new group</div>
               <div class="hidden content"> <i class="right arrow icon"></i> </div>
@@ -47,7 +51,8 @@
 </body>
 
   <template name="bunchTemplate">
-    <div class="ui secondary orange inverted left floated segment bunch" bunch_id="{{_id}}">
+  <div class="column">
+    <div class="ui horizontal secondary orange inverted segment bunch" bunch_id="{{_id}}"> 
       <div class="bunchTitle">
         <h2>{{restaurant}} @ {{time}}
           {{#if isEmpty}}
@@ -63,8 +68,8 @@
           <input type="text" name="newGuy" placeholder="add name" />
          </div>
       </form>
-
     </div>
+  </div>
   </template>
 
   <template name="memberTemplate">
