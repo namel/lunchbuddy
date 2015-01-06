@@ -18,8 +18,12 @@
       <form class="new-bunch">
           <div class="ui primary orange inverted segment bunch">
              <div class="ui input"><input type="text" name="newBunchRestaurant" placeholder="restaurant name" /> </div>
-             <div class="ui input"><input type="text" name="newBunchTime" placeholder="time" /></div>
-             <button class="ui button" type="submit">Go!</button>
+             <div class="ui input"><input type="text" name="newBunchTime" placeholder="at what time" /></div>
+             <div class="ui inverted divider"></div>
+             <button class="ui inverted basic animated button" type="submit">
+                <div class="visible content">Go!</div>
+                <div class="hidden content"><i class="right arrow icon"></i></div>
+             </button>
           </div>
       </form>
       {{else}}
