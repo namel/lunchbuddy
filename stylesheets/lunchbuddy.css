@@ -26,7 +26,7 @@ html, body {
 
 /* line 34, ../sass/lunchbuddy.scss */
 .team-name-container {
-  margin-top: 50px;
+  margin-top: 80px;
   display: inline-block;
 }
 
@@ -85,12 +85,9 @@ li {
 
 /* line 120, ../sass/lunchbuddy.scss */
 .xClose {
-  float: right;
-  font-weight: bold;
+  color: #ccc;
   background: none;
   border: none;
-  color: #888;
-  font-size: 30px;
   outline: none;
   cursor: pointer;
 }

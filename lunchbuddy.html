@@ -9,7 +9,9 @@
     <h1 class="ui orange header">Lunch Buddies</h1>
 
     {{#if teamName}}
-    <h2>your team: {{teamName}} <button class="leave xClose">&times;</button><br></h2>
+    <h2>your team: {{teamName}}
+       <button class="leave xClose"><i class="small remove circle icon"></i></button>
+    </h2>
     {{#each bunch}} {{> bunchTemplate}} {{/each}}
 
       {{#if startNewBunch}}
