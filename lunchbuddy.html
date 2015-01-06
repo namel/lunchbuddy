@@ -49,19 +49,26 @@
   <template name="bunchTemplate">
     <div class="ui secondary orange inverted left floated segment bunch" bunch_id="{{_id}}">
       <div class="bunchTitle">
-        <h2>{{restaurant}} @ {{time}}</h2>
+        <h2>{{restaurant}} @ {{time}}
+          {{#if isEmpty}}
+              <button class="delete xClose"><i class="small remove circle icon"></i></button>
+          {{/if}}
+        </h2>
       </div>
-
-      {{#if isEmpty}}<button class="delete xClose">&times;</button> {{/if}}
+      <div class="ui inverted divider"></div>
+      <ul> {{#each members}} {{> memberTemplate}} {{/each}} </ul>
+      {{#unless isEmpty}} <div class="ui inverted divider"></div> {{/unless}}
       <form class="new-member">
-          <input type="text" name="newGuy" placeholder="your name" />
+         <div class="ui input">
+          <input type="text" name="newGuy" placeholder="add name" />
+         </div>
       </form>
 
-      <ul> {{#each members}} {{> memberTemplate}} {{/each}} </ul>
     </div>
   </template>
 
   <template name="memberTemplate">
-     <li class="li-member"> {{member}} <button class="delete">&times;</button> </li>
+     <li class="li-member"> {{member}} <button class="delete xClose"><i class="remove circle icon"></i></button>
+     </li>
   </template>
 

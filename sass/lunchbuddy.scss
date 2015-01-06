@@ -52,14 +52,6 @@ h2 {
             z-index:1;
         }
     }
-    .bunchTitle{
-        text-align: left;
-        padding: 0 10px;
-        margin-bottom:0.5em;
-        h2{
-            margin:0;
-        }
-    }
 }
 
 ul {
@@ -73,10 +65,12 @@ li {
     padding: 5px;
 }
 
-.delete { 
-    
+.delete.xClose {
+    color: #fff;
+    margin-bottom: 0.5em;
+    float: right;
+}    
 
-}
 .xClose{
     color: #ccc;
     background: none;

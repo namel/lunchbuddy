@@ -16,7 +16,9 @@ if (Meteor.isClient) {
      },
      "click .leave": function(event) { Session.set("teamName", null); },
      "click .new-bunch-button": function(event) { Session.set("startNewBunch", true); },
-     "submit .new-bunch": function(event) { 
+     "submit .new-bunch": function(event) {
+         if (event.target[0].value === "") return false;
+         if (event.target[1].value === "") return false;
          var newBunch = { 
              team: Session.get("teamName"), 
              restaurant: event.target[0].value,
@@ -52,7 +54,7 @@ if (Meteor.isClient) {
   Template.memberTemplate.helpers({ member: function() { return this; } });
   Template.memberTemplate.events({
      "click .delete": function(event) {
-        var bunch_id = $(event.target).parent().parent().parent().attr('bunch_id');
+        var bunch_id = $(event.target).parent().parent().parent().parent().attr('bunch_id');
         var bunch = Bunch.findOne({_id:bunch_id});
         var removeIndex = bunch.members.indexOf(this.toString());
         if (removeIndex < 0) return;
