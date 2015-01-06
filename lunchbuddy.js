@@ -15,6 +15,7 @@ if (Meteor.isClient) {
          return false;
      },
      "click .leave": function(event) { Session.set("teamName", null); },
+     "click .delete": function(event) { Session.set("startNewBunch", false); },
      "click .new-bunch-button": function(event) { Session.set("startNewBunch", true); },
      "submit .new-bunch": function(event) {
          if (event.target[0].value === "") return false;
