@@ -17,9 +17,12 @@
     {{#each bunch}} {{> bunchTemplate}} {{/each}}
     </div>
 
+
       {{#if startNewBunch}}
+    <div class="ui three column grid">
+  <div class="column">
+          <div class="ui horizontal primary orange inverted segment bunch">
       <form class="new-bunch">
-          <div class="ui primary orange inverted segment bunch">
              <div class="ui input"><input type="text" name="newBunchRestaurant" placeholder="restaurant name" /> </div>
              <div class="ui input"><input type="text" name="newBunchTime" placeholder="at what time" /></div>
              <div class="ui inverted divider"></div>
@@ -27,10 +30,13 @@
                 <div class="visible content">Go!</div>
                 <div class="hidden content"><i class="right arrow icon"></i></div>
              </button>
-          </div>
       </form>
+          </div>
+    </div>
+    </div>
+
       {{else}}
-          <div class="ui divider"></div>
+    <div class="ui divider"></div>
           <button class="ui animated button new-bunch-button">
               <div class="visible content">new group</div>
               <div class="hidden content"> <i class="right arrow icon"></i> </div>
