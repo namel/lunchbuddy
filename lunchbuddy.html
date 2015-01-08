@@ -2,14 +2,15 @@
   <title>LunchBuddy</title>
   <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,500,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
  <div id="siteContent">
-    <h1 class="ui orange header">Lunch Buddies</h1>
+    <h1 class="ui orange header">Wolf Lunch</h1>
 
     {{#if teamName}}
-    <h2>your team: {{teamName}}
+    <h2>Your team: <div class="team-name">{{teamName}}</div>
        <button class="leave xClose"><i class="small remove circle icon"></i></button>
     </h2>
 
@@ -17,7 +18,7 @@
     {{#each bunch}} {{> bunchTemplate}} {{/each}}
     </div>
 
-    <div class="ui divider"></div>
+    <!--<div class="ui divider"></div> -->
 
 
       {{#if startNewBunch}}
@@ -26,7 +27,7 @@
   <div class="column">
           <div class="ui horizontal primary orange inverted segment bunch">
            <div class="bunchTitle">
-             <h2>start new group
+             <h2>Start a new group:
               <button class="delete xClose"><i class="small remove circle icon"></i></button>
              </h2>
            </div>
@@ -35,10 +36,12 @@
              <div class="ui input"><input type="text" name="newBunchRestaurant" placeholder="restaurant name" /> </div>
              <div class="ui input"><input type="text" name="newBunchTime" placeholder="at what time" /></div>
              <div class="ui inverted divider"></div>
+             <div class="new-bunch-inner-button">
              <button class="ui inverted basic animated button" type="submit">
                 <div class="visible content">Go!</div>
                 <div class="hidden content"><i class="right arrow icon"></i></div>
              </button>
+             </div>
       </form>
           </div>
     </div>
@@ -46,7 +49,7 @@
 
       {{else}}
           <button class="ui animated button new-bunch-button">
-              <div class="visible content">new group</div>
+              <div class="visible content">start a new group</div>
               <div class="hidden content"> <i class="right arrow icon"></i> </div>
           </button>
       {{/if}}

@@ -12,23 +12,28 @@ html, body{
     margin:0;
     padding:0;
     background-color: #fff;
-    font-family:roboto, sans-serif;
+    font-family: 'Quicksand', sans-serif;
     //background-image(radial-gradient(45px 45px, #eeeeee 10px, #f6f6f6 30px));
 }
 #siteContent{
-    padding-top:100px;
     text-align:center;
     max-width: 972px;
     left: 0;
     right: 0;
     margin: auto;
     h1{
-        font-family: Oxygen, arial;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        font-family: 'Quicksand', sans-serif;
+    }
+    h2 {
+        margin-bottom: 2rem;
     }
 }
 
-h2 {
-    margin-bottom: 2rem;
+
+.team-name {
+    display: inline;
 }
 
 .bunch {
@@ -87,4 +92,18 @@ li {
 
 form input {
     display: block;
+}
+
+.ui.button.new-bunch-button {
+    margin-top: 4rem;
+}
+
+.new-bunch-inner-button {
+    text-align: center;
+}
+
+// brave overrides to semantic ui
+.ui.input {
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
 }
