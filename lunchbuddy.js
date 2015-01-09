@@ -5,8 +5,12 @@ if (Meteor.isClient) {
   // BODY helpers and events
   Template.body.helpers({
      teamName: function() { return Session.get("teamName"); },
-     bunch: function() { return Bunch.find({ team: Session.get("teamName")}); },
-     startNewBunch: function() { return Session.get("startNewBunch"); }
+     startNewBunch: function() { return Session.get("startNewBunch"); },
+     bunch: function() {
+         var start_of_local_day = new Date();
+         start_of_local_day.setHours(0,0,0);
+         return Bunch.find({ team: Session.get("teamName"), created: { "$gte": start_of_local_day }});
+     }
   });
   Template.body.events({
      "submit .team-name": function(event) { 
@@ -24,6 +28,7 @@ if (Meteor.isClient) {
              team: Session.get("teamName"), 
              restaurant: event.target[0].value,
              time: event.target[1].value,
+             created: new Date(),
              members: []
          };
          event.target[0].value = "";
@@ -55,7 +60,7 @@ if (Meteor.isClient) {
   Template.memberTemplate.helpers({ member: function() { return this; } });
   Template.memberTemplate.events({
      "click .delete": function(event) {
-        var bunch_id = $(event.target).parent().parent().parent().parent().attr('bunch_id');
+        var bunch_id = $(event.target).closest("div[bunch_id]").attr("bunch_id");
         var bunch = Bunch.findOne({_id:bunch_id});
         var removeIndex = bunch.members.indexOf(this.toString());
         if (removeIndex < 0) return;
