@@ -53,7 +53,15 @@ if (Meteor.isClient) {
          event.target.newGuy.value = "";
          return false;
      },
-     "click .delete": function(event) { Bunch.remove(this._id); }
+     "click .delete": function(event) {
+         var that = this;
+         $(event.target).closest("div[bunch_id]")
+             .transition({
+                  animation: 'horizontal flip',
+                  duration: '3s',
+                  onComplete: function() { Bunch.remove(that._id); }
+             });
+     }
   });
 
   // MEMBER helpers and events
