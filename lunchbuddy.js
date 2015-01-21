@@ -14,7 +14,7 @@ if (Meteor.isClient) {
   });
   Template.body.events({
      "submit .team-name": function(event) { 
-         Session.set("teamName", event.target.teamName.value); 
+         Session.set("teamName", event.target.teamName.value.toLowerCase());
          event.target.teamName.value = "";
          return false;
      },
